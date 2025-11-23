@@ -8,6 +8,8 @@ vim.opt.shiftround = true
 vim.opt.tabstop = 2
 
 -- misc
-vim.opt.termguicolors = -- true color support
+vim.opt.termguicolors = true -- true color support
 
 -- requirements
+require("config.lazy")
+require("lazy").setup("plugins")
