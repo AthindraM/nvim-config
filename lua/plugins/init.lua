@@ -1,5 +1,8 @@
 return {
-	-- Onedark colorscheme
+	-- plenary
+		"nvim-lua/plenary.nvim",
+
+	-- onedark colorscheme
 	{
 		"navarasu/onedark.nvim",
 		priority = 1000,  -- load before other UI plugins
@@ -32,6 +35,8 @@ return {
 			})
 		end,
 	},
+
+	-- autopairs
 	{
     'windwp/nvim-autopairs',
     event = "InsertEnter",
@@ -40,4 +45,5 @@ return {
     -- this is equivalent to setup({}) function
 	},
 }
+
 
