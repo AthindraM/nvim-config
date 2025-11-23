@@ -12,4 +12,6 @@ vim.opt.termguicolors = true -- true color support
 
 -- requirements
 require("config.lazy")
+require("config.keymaps")
 require("lazy").setup("plugins")
+
