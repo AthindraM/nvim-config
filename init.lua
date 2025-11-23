@@ -2,20 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- line numbers
-vim.opt.number = true
-vim.opt.relativenumber = true
-
--- tabs
-vim.opt.shiftwidth = 2
-vim.opt.shiftround = true
-vim.opt.tabstop = 2
-
--- misc
-vim.opt.termguicolors = true -- true color support
-
 -- requirements
 require("config.lazy")
 require("config.keymaps")
+require("config.opts")
 require("lazy").setup("plugins")
 

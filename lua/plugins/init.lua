@@ -44,6 +44,16 @@ return {
     -- use opts = {} for passing setup options
     -- this is equivalent to setup({}) function
 	},
+
+	-- telescope
+	{
+    'nvim-telescope/telescope.nvim', tag = 'v0.1.9',
+     dependencies = { 'nvim-lua/plenary.nvim' }
+	},
+	-- which-key
+	-- lualine
+	-- indent lines
+	-- greeter
 }
 
 
