@@ -1,10 +1,10 @@
 vim.keymap.set("i", "jk", "<esc>")
 
 -- c++
-vim.keymap.set("n", "<leader>b", ":!cmake -Bbuild && cmake --build build<CR>",
+vim.keymap.set("n", "<leader>cb", ":!cmake -Bbuild && cmake --build build<CR>",
   { desc = "Build project" })
 
-vim.keymap.set("n", "<leader>r", ":!./build/OpenGLProject<CR>",
+vim.keymap.set("n", "<leader>cr", ":!./build/OpenGLProject<CR>",
   { desc = "Run project" })
 
 -- PLUGINS --
