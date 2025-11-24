@@ -2,7 +2,7 @@ vim.keymap.set("i", "jk", "<esc>")
 
 -- c++
 vim.keymap.set("n", "<leader>cb", "<cmd>w<cr><cmd>!cmake -Bbuild && cmake --build build<cr>",
-  { desc = "Build project" })
+  { desc = "Build C++ project" })
 
 vim.keymap.set("n", "<leader>cr", ":!./build/OpenGLProject<CR>",
   { desc = "Run C++ project" })
