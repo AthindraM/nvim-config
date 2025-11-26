@@ -4,9 +4,6 @@ vim.keymap.set("i", "jk", "<esc>")
 vim.keymap.set("n", "<leader>cb", "<cmd>w<cr><cmd>!cmake -Bbuild && cmake --build build<cr>",
   { desc = "Build C++ project" })
 
-vim.keymap.set("n", "<leader>cr", ":!./build/CPPProject<CR>",
-  { desc = "Run OpenGL C++ project" })
-
 -- PLUGINS --
 -- nvim tree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", 
