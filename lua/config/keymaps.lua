@@ -1,4 +1,7 @@
 vim.keymap.set("i", "jk", "<esc>")
+vim.keymap.set("n", "<leader>wq", "<cmd>wq<cr>")
+vim.keymap.set("n", "<leader>w", "<cmd>w<cr>")
+vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
 
 -- c++
 vim.keymap.set("n", "<leader>cb", "<cmd>w<cr><cmd>!cmake -Bbuild && cmake --build build<cr>",
