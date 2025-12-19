@@ -1,10 +1,10 @@
--- leader key
+-- leader key 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- requirements
+-- Bootstrap and setup lazy.nvim
 require("config.lazy")
+
+-- Load configurations
 require("config.keymaps")
 require("config.opts")
-require("lazy").setup("plugins")
-

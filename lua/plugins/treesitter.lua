@@ -1,54 +1,29 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
+  event = { "BufReadPost", "BufNewFile" },
   dependencies = {
     "windwp/nvim-ts-autotag",
   },
-  config = function()
-    -- import nvim-treesitter plugin
-    local treesitter = require("nvim-treesitter.configs")
-
-    -- configure treesitter
-    treesitter.setup({ -- enable syntax highlighting
-      highlight = {
-        enable = true,
+  opts = {
+    highlight = { enable = true },
+    indent = { enable = true },
+    autotag = { enable = true },
+    ensure_installed = {
+      "lua", "vim", "vimdoc",
+      "cpp", "python", "json",
+      "javascript", "typescript", "tsx",
+      "html", "css", "markdown", "markdown_inline",
+      "bash", "dockerfile", "gitignore", "c",
+    },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "<C-space>",
+        node_incremental = "<C-space>",
+        scope_incremental = false,
+        node_decremental = "<bs>",
       },
-      -- enable indentation
-      indent = { enable = true },
-      -- enable autotagging (w/ nvim-ts-autotag plugin)
-      autotag = {
-        enable = true,
-      },
-      -- ensure these language parsers are installed
-      ensure_installed = {
-				"cpp",
-				"python",
-        "json",
-        "javascript",
-        "typescript",
-        "tsx",
-        "html",
-        "css",
-        "markdown",
-        "markdown_inline",
-        "bash",
-        "lua",
-        "vim",
-        "dockerfile",
-        "gitignore",
-        "vimdoc",
-        "c",
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
-          scope_incremental = false,
-          node_decremental = "<bs>",
-        },
-      },
-    })
-  end,
+    },
+  },
 }
